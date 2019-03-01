@@ -32,7 +32,7 @@ function getDisplayTime(now) {
   } else {
     hours = getHours(now);
   }
-  return [hours, minutes];
+  return [hours, minutes % 60];
 }
 
 export function getLetters() {

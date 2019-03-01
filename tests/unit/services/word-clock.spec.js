@@ -51,6 +51,16 @@ describe('word-clock', () => {
       expect(actualStatus).toMatch(expectedStatus);
     });
 
+    test('19:58', () => {
+      const date = parse('2018-11-21T19:58:00');
+      // prettier-ignore
+      const expectedStatus =
+      // ilnestodeuxquatretroisneufunesepthuitsixcinqmidixminuitonzerheuresmoinsoledixetrquartpmdvingt-cinquetsdemiepam
+        '11011100000000000000000000000000011110000000000000000000000011111100000000000000000000000000000000000000000000';
+      const actualStatus = getStatus(date);
+      expect(actualStatus).toMatch(expectedStatus);
+    });
+
     test('21:43', () => {
       const date = parse('2018-11-21T21:43:00');
       // prettier-ignore
